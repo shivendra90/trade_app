@@ -1,0 +1,33 @@
+Run the full command after importing env variables. This will auto download data
+
+BREEZE_API_KEY='...' \
+BREEZE_API_SECRET='...' \
+BREEZE_SESSION_TOKEN='...' \
+
+python /home/omen16/Documents/Repos/portfolio_breeze_api/backtest_trade_bot.py \
+  --symbol NIFTY-I \
+  --exchange NSE \
+  --interval 1minute \
+  --strategy sma_crossover \
+  --qty 1 \
+  --s top-loss-amount 20 \
+  --target-amount 35 \
+  --trailing-stop-amount 15
+
+Or simply run for a specific date
+python /home/omen16/Documents/Repos/portfolio_breeze_api/backtest_trade_bot.py \
+  --backtest-date 2026-07-09 \
+  --strategy breakout
+
+For multi-day batch tests
+python /home/omen16/Documents/Repos/portfolio_breeze_api/backtest_trade_bot.py \
+  --symbol NIFTY-I \
+  --exchange NSE \
+  --interval 1minute \
+  --from-date 2026-07-01 \
+  --to-date 2026-07-09 \
+  --compare-strategies sma_crossover,rsi_mean_reversion,breakout \
+  --qty 1 \
+  --stop-loss-amount 20 \
+  --target-amount 35 \
+  --trailing-stop-amount 15

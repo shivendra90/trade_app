@@ -1,0 +1,22 @@
+export API_KEY='B#04097145_P65Do174171zn2&pG86A3' \
+export SECRET='Y81704t4655exu77o24d79U210z2laK7' \
+export TOKEN='56280133' \
+python /home/omen16/Documents/Repos/portfolio_breeze_api/live_trade_bot.py \
+  --symbol NIFTY-I \
+  --exchange NSE \
+  --interval 1minute \
+  --qty 1 \
+  --strategy sma_crossover \
+  --start-time 09:15 \
+  --end-time 15:30 \
+  --lookback-minutes 120 \
+  --poll-seconds 60 \
+  --stop-loss-pct 0.7 \ OR --stop-loss-amount
+  --target-pct 1.2 \ OR --target-amount
+  --trailing-stop-pct 0.5 \ OR --trailing-stop-amount
+  --daily \
+  --live-chart \
+  --chart-file /home/omen16/Documents/Repos/portfolio_breeze_api/logs/day_live_chart.png \
+  --csv-log /home/omen16/Documents/Repos/portfolio_breeze_api/logs/trade_tracker_$(date +%Y%m%d).csv \
+  --max-iterations 0 \
+  --live-orders
