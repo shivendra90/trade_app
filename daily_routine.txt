@@ -1,5 +1,5 @@
-export API_KEY='B#04097145_P65Do174171zn2&pG86A3' \
-export SECRET='Y81704t4655exu77o24d79U210z2laK7' \
+export API_KEY='...' \
+export SECRET='...' \
 export TOKEN='56280133' \
 python /home/omen16/Documents/Repos/portfolio_breeze_api/live_trade_bot.py \
   --symbol NIFTY-I \
